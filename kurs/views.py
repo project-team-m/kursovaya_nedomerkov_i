@@ -67,9 +67,6 @@ class Dir:
             string = "{}, {}".format(string, i)
         return string
 
-
-# Класс для поиска текста по шаблону
-class Find:
     # Выводит текст и позиции которые были найдены в файле
     @staticmethod
     def find(string, word):

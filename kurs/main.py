@@ -1,4 +1,4 @@
-# Импортируем классы: File, Dir, Find из views.py
+# Импортируем классы: File, Dir из views.py
 from views import *
 
 
@@ -116,7 +116,7 @@ class ChangeFind(PrintFile):
                 text = input('Введите текст для поиска: ')
                 # Если пользователь указал путь до файла, который можно открыть, то будет предложено ввести текст который
                 # необходимо будет найти
-                find = Find.find(tmp.__str__(), text)
+                find = Dir.find(tmp.__str__(), text)
                 if find:
                     for i in find:
                         print(i)
@@ -137,7 +137,7 @@ class ChangeFind(PrintFile):
         elif not Menu.case(self, el):
             try:
                 text = input('Введите текст для поиска: ')
-                find = Find.find(Menu.dir.show(int(el) - 1), text)
+                find = Dir.find(Menu.dir.show(int(el) - 1), text)
                 if find:
                     print(text)
                     for i in find:
